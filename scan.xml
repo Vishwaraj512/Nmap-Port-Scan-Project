@@ -1,36 +1,321 @@
-1. What is an open port?
-An open port is a logical endpoint on a device that is configured to accept incoming data. It is essentially a communication gateway that allows specific services or applications to connect and exchange information with other devices on a network.
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet href="file:///C:/Program Files (x86)/Nmap/nmap.xsl" type="text/xsl"?><nmaprun args="nmap -p 1-65535 -T4 -A -v 10.127.208.153" profile_name="Intense scan, all TCP ports" scanner="nmap" start="1758528570" startstr="Mon Sep 22 13:39:30 2025" version="7.98" xmloutputversion="1.04"><scaninfo type="syn" protocol="tcp" numservices="65535" services="1-65535"></scaninfo><verbose level="1"></verbose><debugging level="0"></debugging><output type="interactive">Starting Nmap 7.98 ( https://nmap.org ) at 2025-09-22 13:39 +0530
+NSE: Loaded 158 scripts for scanning.
+NSE: Script Pre-scanning.
+Initiating NSE at 13:39
+Completed NSE at 13:39, 0.00s elapsed
+Initiating NSE at 13:39
+Completed NSE at 13:39, 0.00s elapsed
+Initiating NSE at 13:39
+Completed NSE at 13:39, 0.00s elapsed
+Initiating Parallel DNS resolution of 1 host. at 13:39
+Completed Parallel DNS resolution of 1 host. at 13:39, 0.50s elapsed
+Initiating SYN Stealth Scan at 13:39
+Scanning 10.127.208.153 [65535 ports]
+Discovered open port 139/tcp on 10.127.208.153
+Discovered open port 445/tcp on 10.127.208.153
+Discovered open port 135/tcp on 10.127.208.153
+Discovered open port 49665/tcp on 10.127.208.153
+Discovered open port 8020/tcp on 10.127.208.153
+Discovered open port 27036/tcp on 10.127.208.153
+Discovered open port 5040/tcp on 10.127.208.153
+Discovered open port 49666/tcp on 10.127.208.153
+Discovered open port 49667/tcp on 10.127.208.153
+Discovered open port 49668/tcp on 10.127.208.153
+Discovered open port 49669/tcp on 10.127.208.153
+Discovered open port 8028/tcp on 10.127.208.153
+Discovered open port 8383/tcp on 10.127.208.153
+Discovered open port 8027/tcp on 10.127.208.153
+Discovered open port 9095/tcp on 10.127.208.153
+Discovered open port 8834/tcp on 10.127.208.153
+Discovered open port 8443/tcp on 10.127.208.153
+Discovered open port 8444/tcp on 10.127.208.153
+Discovered open port 49664/tcp on 10.127.208.153
+Completed SYN Stealth Scan at 13:39, 5.04s elapsed (65535 total ports)
+Initiating Service scan at 13:39
+Scanning 19 services on 10.127.208.153
+Service scan Timing: About 57.89% done; ETC: 13:41 (0:00:39 remaining)
+Completed Service scan at 13:42, 167.61s elapsed (19 services on 1 host)
+Initiating OS detection (try #1) against 10.127.208.153
+NSE: Script scanning 10.127.208.153.
+Initiating NSE at 13:42
+Completed NSE at 13:42, 14.26s elapsed
+Initiating NSE at 13:42
+Completed NSE at 13:42, 2.54s elapsed
+Initiating NSE at 13:42
+Completed NSE at 13:42, 0.00s elapsed
+Nmap scan report for 10.127.208.153
+Host is up (0.00028s latency).
+Not shown: 65511 closed tcp ports (reset)
+PORT      STATE    SERVICE              VERSION
+25/tcp    filtered smtp
+110/tcp   filtered pop3
+135/tcp   open     msrpc                Microsoft Windows RPC
+137/tcp   filtered netbios-ns
+139/tcp   open     netbios-ssn          Microsoft Windows netbios-ssn
+329/tcp   filtered unknown
+445/tcp   open     microsoft-ds?
+548/tcp   filtered afp
+5040/tcp  open     unknown
+8020/tcp  open     http                 nginx (reverse proxy)
+| http-robots.txt: 1 disallowed entry 
+|_/
+|_http-title: Site doesn't have a title (text/html;charset=UTF-8).
+| http-methods: 
+|_  Supported Methods: GET
+8027/tcp  open     ssl/papachi-p2p-srv?
+|_ssl-date: TLS randomness does not represent time
+| ssl-cert: Subject: commonName=ManageEngine/organizationName=Zoho Corporation/stateOrProvinceName=CA/countryName=US
+| Subject Alternative Name: IP Address:192.168.56.1, DNS:Vishwaraj
+| Issuer: commonName=ManageEngineCA/organizationName=Zoho Corporation/stateOrProvinceName=CA/countryName=US
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha256WithRSAEncryption
+| Not valid before: 2025-09-15T04:58:28
+| Not valid after:  2026-09-15T04:58:28
+| MD5:     2ec0 82de 0a77 9270 b3d5 c567 a1e8 ecb7
+| SHA-1:   fee8 d3f2 cc46 eb2c a242 54f7 3928 9173 f6df 0d4b
+|_SHA-256: 1984 ae74 2085 653e 8e5b 9a65 cdc3 2ce9 200f b718 3265 d7e9 ca2e fbc2 cf5f 1b7f
+8028/tcp  open     postgresql           PostgreSQL DB 9.6.0 or later
+8383/tcp  open     ssl/http             nginx
+| tls-alpn: 
+|   h2
+|   http/1.1
+|   http/1.0
+|_  http/0.9
+| http-methods: 
+|_  Supported Methods: GET OPTIONS
+| ssl-cert: Subject: commonName=ManageEngine/organizationName=Zoho Corporation/stateOrProvinceName=CA/countryName=US
+| Subject Alternative Name: IP Address:192.168.56.1, DNS:Vishwaraj
+| Issuer: commonName=ManageEngineCA/organizationName=Zoho Corporation/stateOrProvinceName=CA/countryName=US
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha256WithRSAEncryption
+| Not valid before: 2025-09-15T04:58:28
+| Not valid after:  2026-09-15T04:58:28
+| MD5:     2ec0 82de 0a77 9270 b3d5 c567 a1e8 ecb7
+| SHA-1:   fee8 d3f2 cc46 eb2c a242 54f7 3928 9173 f6df 0d4b
+|_SHA-256: 1984 ae74 2085 653e 8e5b 9a65 cdc3 2ce9 200f b718 3265 d7e9 ca2e fbc2 cf5f 1b7f
+|_http-title: Site doesn't have a title (text/html;charset=UTF-8).
+|_ssl-date: TLS randomness does not represent time
+| http-robots.txt: 1 disallowed entry 
+|_/
+8443/tcp  open     ssl/https-alt
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.1 404 
+|     Set-Cookie: UEMJSESSIONID=A096FAF530749DBDFBDC8CE9547D582C; Path=/; Secure; HttpOnly; SameSite=None
+|     X-FRAME-OPTIONS: SAMEORIGIN
+|     Referrer-Policy: same-origin
+|     Strict-Transport-Security: max-age=63072000; includeSubdomains;
+|     X-Content-Type-Options: nosniff
+|     Permissions-Policy: accelerometer=(),autoplay=(),camera=(),display-capture=(),encrypted-media=(),fullscreen=(),gamepad=(),geolocation=(),gyroscope=(),magnetometer=(),microphone=(),midi=(),payment=(),picture-in-picture=(),publickey-credentials-get=(),usb=(),screen-wake-lock=(),xr-spatial-tracking=()
+|     Content-Security-Policy: default-src 'none';
+|     X-Download-Options: noopen
+|     X-Permitted-Cross-Domain-Policies: none
+|     Expect-CT: max-age=7776000
+|     Content-Type: application/json;charset=ISO-8859-1
+|     Content-Length: 137
+|     Date: Mon, 22 Sep 2025 08:09:48 GMT
+|     Connection: close
+|     {"errorCode":"IAM0027","url":"/nice%20ports%2C/Tri%6E
+|   GetRequest: 
+|     HTTP/1.1 200 
+|     Set-Cookie: UEMJSESSIONID=7A23A2FF8E032BCD7C7303CCD3D37193; Path=/; Secure; HttpOnly; SameSite=None
+|     X-FRAME-OPTIONS: SAMEORIGIN
+|     Referrer-Policy: same-origin
+|     Strict-Transport-Security: max-age=63072000; includeSubdomains;
+|     X-Content-Type-Options: nosniff
+|     Permissions-Policy: accelerometer=(),autoplay=(),camera=(),display-capture=(),encrypted-media=(),fullscreen=(),gamepad=(),geolocation=(),gyroscope=(),magnetometer=(),microphone=(),midi=(),payment=(),picture-in-picture=(),publickey-credentials-get=(),usb=(),screen-wake-lock=(),xr-spatial-tracking=()
+|     Content-Security-Policy: default-src 'none';
+|     X-Download-Options: noopen
+|     X-Permitted-Cross-Domain-Policies: none
+|     Expect-CT: max-age=7776000
+|     Set-Cookie: dccookcsr=dea57d43-bc2c-4ba0-a6d4-593a4a825fc1;path=/;Secure;priority=high
+|     Accept-Ranges: bytes
+|     ETag: W/"108-1757603220000"
+|     Last-Modified: Thu, 11 Sep 2025 15:07:00 GMT
+|   HTTPOptions: 
+|     HTTP/1.1 200 
+|     Set-Cookie: UEMJSESSIONID=739D7A106492426BAF71C3F5F8FEE218; Path=/; Secure; HttpOnly; SameSite=None
+|     X-FRAME-OPTIONS: SAMEORIGIN
+|     Cache-Control: no-cache, no-store
+|     Pragma: no-cache
+|     Expires: Thu, 01 Jan 1970 00:00:00 GMT
+|     Content-Length: 0
+|     Date: Mon, 22 Sep 2025 08:09:48 GMT
+|_    Connection: close
+| ssl-cert: Subject: commonName=ManageEngine/organizationName=Zoho Corporation/stateOrProvinceName=CA/countryName=US
+| Subject Alternative Name: IP Address:192.168.56.1, DNS:Vishwaraj
+| Issuer: commonName=ManageEngineCA/organizationName=Zoho Corporation/stateOrProvinceName=CA/countryName=US
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha256WithRSAEncryption
+| Not valid before: 2025-09-15T04:58:28
+| Not valid after:  2026-09-15T04:58:28
+| MD5:     2ec0 82de 0a77 9270 b3d5 c567 a1e8 ecb7
+| SHA-1:   fee8 d3f2 cc46 eb2c a242 54f7 3928 9173 f6df 0d4b
+|_SHA-256: 1984 ae74 2085 653e 8e5b 9a65 cdc3 2ce9 200f b718 3265 d7e9 ca2e fbc2 cf5f 1b7f
+| http-methods: 
+|_  Supported Methods: GET OPTIONS
+|_ssl-date: TLS randomness does not represent time
+|_http-title: Site doesn't have a title (text/html;charset=UTF-8).
+| http-robots.txt: 1 disallowed entry 
+|_/
+8444/tcp  open     pcsync-http?
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, DNSVersionBindReqTCP, Help, RPCCheck, RTSPRequest: 
+|     HTTP/1.1 500 
+|     Date: Mon, 22 Sep 2025 08:09:47 GMT
+|     Connection: close
+|   GetRequest: 
+|     HTTP/1.1 200 
+|     Set-Cookie: UEMJSESSIONID=93E2D2373B6A18B14ADD7C85723D4045; Path=/; HttpOnly
+|     X-FRAME-OPTIONS: SAMEORIGIN
+|     Referrer-Policy: same-origin
+|     Strict-Transport-Security: max-age=63072000; includeSubdomains;
+|     X-Content-Type-Options: nosniff
+|     Permissions-Policy: accelerometer=(),autoplay=(),camera=(),display-capture=(),encrypted-media=(),fullscreen=(),gamepad=(),geolocation=(),gyroscope=(),magnetometer=(),microphone=(),midi=(),payment=(),picture-in-picture=(),publickey-credentials-get=(),usb=(),screen-wake-lock=(),xr-spatial-tracking=()
+|     Content-Security-Policy: default-src 'none';
+|     X-Download-Options: noopen
+|     X-Permitted-Cross-Domain-Policies: none
+|     Expect-CT: max-age=7776000
+|     Set-Cookie: dccookcsr=886a2697-3368-4551-9db1-c442e9668868;path=/;priority=high
+|     Accept-Ranges: bytes
+|     ETag: W/"108-1757603220000"
+|     Last-Modified: Thu, 11 Sep 2025 15:07:00 GMT
+|     Content-Type: text/html;char
+|   HTTPOptions: 
+|     HTTP/1.1 200 
+|     Set-Cookie: UEMJSESSIONID=142E60F23E5D8B7680B8D866BDB2739E; Path=/; HttpOnly
+|     X-FRAME-OPTIONS: SAMEORIGIN
+|     Cache-Control: no-cache, no-store
+|     Pragma: no-cache
+|     Expires: Thu, 01 Jan 1970 00:00:00 GMT
+|     Content-Length: 0
+|     Date: Mon, 22 Sep 2025 08:09:47 GMT
+|_    Connection: close
+8834/tcp  open     ssl/nessus-xmlrpc?
+|_ssl-date: TLS randomness does not represent time
+| ssl-cert: Subject: commonName=Vishwaraj/organizationName=Nessus Users United/stateOrProvinceName=NY/countryName=US
+| Issuer: commonName=Nessus Certification Authority/organizationName=Nessus Users United/stateOrProvinceName=NY/countryName=US
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha256WithRSAEncryption
+| Not valid before: 2025-08-11T06:00:54
+| Not valid after:  2029-08-10T06:00:54
+| MD5:     6de6 9093 880f fee5 3b17 a0b0 af30 a1a0
+| SHA-1:   0082 f3ab fb93 a572 6c84 fdd0 ba9e f0b1 2c06 35a1
+|_SHA-256: 184d ca75 eaf2 f675 d129 35ec afc5 73fa 21e0 3912 a43c 17c7 6ca6 0d95 f072 bae6
+9095/tcp  open     http                 Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+|_http-title: Bad Request
+|_http-server-header: Microsoft-HTTPAPI/2.0
+27036/tcp open     ssl/steam            Valve Steam In-Home Streaming service (TLSv1.2 PSK)
+49664/tcp open     msrpc                Microsoft Windows RPC
+49665/tcp open     msrpc                Microsoft Windows RPC
+49666/tcp open     msrpc                Microsoft Windows RPC
+49667/tcp open     msrpc                Microsoft Windows RPC
+49668/tcp open     msrpc                Microsoft Windows RPC
+49669/tcp open     msrpc                Microsoft Windows RPC
+2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port8443-TCP:V=7.98%T=SSL%I=7%D=9/22%Time=68D1044C%P=i686-pc-windows-wi
+SF:ndows%r(GetRequest,468,"HTTP/1\.1\x20200\x20\r\nSet-Cookie:\x20UEMJSESS
+SF:IONID=7A23A2FF8E032BCD7C7303CCD3D37193;\x20Path=/;\x20Secure;\x20HttpOn
+SF:ly;\x20SameSite=None\r\nX-FRAME-OPTIONS:\x20SAMEORIGIN\r\nReferrer-Poli
+SF:cy:\x20same-origin\r\nStrict-Transport-Security:\x20max-age=63072000;\x
+SF:20includeSubdomains;\r\nX-Content-Type-Options:\x20nosniff\r\nPermissio
+SF:ns-Policy:\x20accelerometer=\(\),autoplay=\(\),camera=\(\),display-capt
+SF:ure=\(\),encrypted-media=\(\),fullscreen=\(\),gamepad=\(\),geolocation=
+SF:\(\),gyroscope=\(\),magnetometer=\(\),microphone=\(\),midi=\(\),payment
+SF:=\(\),picture-in-picture=\(\),publickey-credentials-get=\(\),usb=\(\),s
+SF:creen-wake-lock=\(\),xr-spatial-tracking=\(\)\r\nContent-Security-Polic
+SF:y:\x20default-src\x20'none';\r\nX-Download-Options:\x20noopen\r\nX-Perm
+SF:itted-Cross-Domain-Policies:\x20none\r\nExpect-CT:\x20max-age=7776000\r
+SF:\nSet-Cookie:\x20dccookcsr=dea57d43-bc2c-4ba0-a6d4-593a4a825fc1;path=/;
+SF:Secure;priority=high\r\nAccept-Ranges:\x20bytes\r\nETag:\x20W/\"108-175
+SF:7603220000\"\r\nLast-Modified:\x20Thu,\x2011\x20Sep\x202025\x2015:07:00
+SF:\x20GMT")%r(HTTPOptions,13B,"HTTP/1\.1\x20200\x20\r\nSet-Cookie:\x20UEM
+SF:JSESSIONID=739D7A106492426BAF71C3F5F8FEE218;\x20Path=/;\x20Secure;\x20H
+SF:ttpOnly;\x20SameSite=None\r\nX-FRAME-OPTIONS:\x20SAMEORIGIN\r\nCache-Co
+SF:ntrol:\x20no-cache,\x20no-store\r\nPragma:\x20no-cache\r\nExpires:\x20T
+SF:hu,\x2001\x20Jan\x201970\x2000:00:00\x20GMT\r\nContent-Length:\x200\r\n
+SF:Date:\x20Mon,\x2022\x20Sep\x202025\x2008:09:48\x20GMT\r\nConnection:\x2
+SF:0close\r\n\r\n")%r(FourOhFourRequest,3D8,"HTTP/1\.1\x20404\x20\r\nSet-C
+SF:ookie:\x20UEMJSESSIONID=A096FAF530749DBDFBDC8CE9547D582C;\x20Path=/;\x2
+SF:0Secure;\x20HttpOnly;\x20SameSite=None\r\nX-FRAME-OPTIONS:\x20SAMEORIGI
+SF:N\r\nReferrer-Policy:\x20same-origin\r\nStrict-Transport-Security:\x20m
+SF:ax-age=63072000;\x20includeSubdomains;\r\nX-Content-Type-Options:\x20no
+SF:sniff\r\nPermissions-Policy:\x20accelerometer=\(\),autoplay=\(\),camera
+SF:=\(\),display-capture=\(\),encrypted-media=\(\),fullscreen=\(\),gamepad
+SF:=\(\),geolocation=\(\),gyroscope=\(\),magnetometer=\(\),microphone=\(\)
+SF:,midi=\(\),payment=\(\),picture-in-picture=\(\),publickey-credentials-g
+SF:et=\(\),usb=\(\),screen-wake-lock=\(\),xr-spatial-tracking=\(\)\r\nCont
+SF:ent-Security-Policy:\x20default-src\x20'none';\r\nX-Download-Options:\x
+SF:20noopen\r\nX-Permitted-Cross-Domain-Policies:\x20none\r\nExpect-CT:\x2
+SF:0max-age=7776000\r\nContent-Type:\x20application/json;charset=ISO-8859-
+SF:1\r\nContent-Length:\x20137\r\nDate:\x20Mon,\x2022\x20Sep\x202025\x2008
+SF::09:48\x20GMT\r\nConnection:\x20close\r\n\r\n{\"errorCode\":\"IAM0027\"
+SF:,\"url\":\"/nice%20ports%2C/Tri%6E");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port8444-TCP:V=7.98%I=7%D=9/22%Time=68D1044B%P=i686-pc-windows-windows%
+SF:r(GetRequest,44A,"HTTP/1\.1\x20200\x20\r\nSet-Cookie:\x20UEMJSESSIONID=
+SF:93E2D2373B6A18B14ADD7C85723D4045;\x20Path=/;\x20HttpOnly\r\nX-FRAME-OPT
+SF:IONS:\x20SAMEORIGIN\r\nReferrer-Policy:\x20same-origin\r\nStrict-Transp
+SF:ort-Security:\x20max-age=63072000;\x20includeSubdomains;\r\nX-Content-T
+SF:ype-Options:\x20nosniff\r\nPermissions-Policy:\x20accelerometer=\(\),au
+SF:toplay=\(\),camera=\(\),display-capture=\(\),encrypted-media=\(\),fulls
+SF:creen=\(\),gamepad=\(\),geolocation=\(\),gyroscope=\(\),magnetometer=\(
+SF:\),microphone=\(\),midi=\(\),payment=\(\),picture-in-picture=\(\),publi
+SF:ckey-credentials-get=\(\),usb=\(\),screen-wake-lock=\(\),xr-spatial-tra
+SF:cking=\(\)\r\nContent-Security-Policy:\x20default-src\x20'none';\r\nX-D
+SF:ownload-Options:\x20noopen\r\nX-Permitted-Cross-Domain-Policies:\x20non
+SF:e\r\nExpect-CT:\x20max-age=7776000\r\nSet-Cookie:\x20dccookcsr=886a2697
+SF:-3368-4551-9db1-c442e9668868;path=/;priority=high\r\nAccept-Ranges:\x20
+SF:bytes\r\nETag:\x20W/\"108-1757603220000\"\r\nLast-Modified:\x20Thu,\x20
+SF:11\x20Sep\x202025\x2015:07:00\x20GMT\r\nContent-Type:\x20text/html;char
+SF:")%r(HTTPOptions,124,"HTTP/1\.1\x20200\x20\r\nSet-Cookie:\x20UEMJSESSIO
+SF:NID=142E60F23E5D8B7680B8D866BDB2739E;\x20Path=/;\x20HttpOnly\r\nX-FRAME
+SF:-OPTIONS:\x20SAMEORIGIN\r\nCache-Control:\x20no-cache,\x20no-store\r\nP
+SF:ragma:\x20no-cache\r\nExpires:\x20Thu,\x2001\x20Jan\x201970\x2000:00:00
+SF:\x20GMT\r\nContent-Length:\x200\r\nDate:\x20Mon,\x2022\x20Sep\x202025\x
+SF:2008:09:47\x20GMT\r\nConnection:\x20close\r\n\r\n")%r(RTSPRequest,49,"H
+SF:TTP/1\.1\x20500\x20\r\nDate:\x20Mon,\x2022\x20Sep\x202025\x2008:09:47\x
+SF:20GMT\r\nConnection:\x20close\r\n\r\n")%r(RPCCheck,49,"HTTP/1\.1\x20500
+SF:\x20\r\nDate:\x20Mon,\x2022\x20Sep\x202025\x2008:09:47\x20GMT\r\nConnec
+SF:tion:\x20close\r\n\r\n")%r(DNSVersionBindReqTCP,49,"HTTP/1\.1\x20500\x2
+SF:0\r\nDate:\x20Mon,\x2022\x20Sep\x202025\x2008:09:47\x20GMT\r\nConnectio
+SF:n:\x20close\r\n\r\n")%r(DNSStatusRequestTCP,49,"HTTP/1\.1\x20500\x20\r\
+SF:nDate:\x20Mon,\x2022\x20Sep\x202025\x2008:09:47\x20GMT\r\nConnection:\x
+SF:20close\r\n\r\n")%r(Help,49,"HTTP/1\.1\x20500\x20\r\nDate:\x20Mon,\x202
+SF:2\x20Sep\x202025\x2008:09:47\x20GMT\r\nConnection:\x20close\r\n\r\n");
+Device type: general purpose
+Running: Microsoft Windows 10|11
+OS CPE: cpe:/o:microsoft:windows_10 cpe:/o:microsoft:windows_11
+OS details: Microsoft Windows 10 1607 - 11 23H2
+Uptime guess: 6.099 days (since Tue Sep 16 11:20:20 2025)
+Network Distance: 0 hops
+TCP Sequence Prediction: Difficulty=261 (Good luck!)
+IP ID Sequence Generation: Incremental
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
 
+Host script results:
+| smb2-security-mode: 
+|   3.1.1: 
+|_    Message signing enabled but not required
+| smb2-time: 
+|   date: 2025-09-22T08:12:29
+|_  start_date: N/A
 
-2. How does Nmap perform a TCP SYN scan?
-A TCP SYN scan, also known as a "stealth scan," is a type of port scan where Nmap sends a SYN packet to a port. If the port is open, the target sends back a SYN-ACK packet, and Nmap responds with a RST packet instead of the final ACK. This prevents a full TCP connection from being established and is less likely to be logged by the target system.
-
-
-3. What risks are associated with open ports?
-Open ports can pose a significant security risk. If a service running on an open port is outdated, improperly configured, or has known vulnerabilities, it can be exploited by an attacker to gain unauthorized access, launch a denial-of-service attack, or install malware.
-
-
-4. Explain the difference between TCP and UDP scanning.
-- TCP (Transmission Control Protocol) scanning establishes a connection and is a reliable, ordered, and error-checked protocol. It is more common for services like web servers. 
-
-- UDP (User Datagram Protocol) scanning, in contrast, is connectionless and faster, but it is unreliable as there is no handshaking process. It is used for services like DNS and DHCP.
-
-
-5. How can open ports be secured?
-Open ports can be secured by:
-- Implementing a firewall to control traffic flow.
-- Disabling unnecessary services to reduce the attack surface.
-- Regularly patching and updating software to fix known vulnerabilities.
-- Using strong authentication and encryption to prevent unauthorized access.
-
-
-6. What is a firewall's role regarding ports?
-A firewall acts as a security barrier that monitors and controls incoming and outgoing network traffic based on predefined security rules. Its primary role is to filter traffic to ports, blocking unwanted connections and allowing only authorized access to services.
-
-
-7. What is a port scan and why do attackers perform it?
-A port scan is a process of systematically checking a server or host for open ports. Attackers perform port scans to find potential entry points into a system. The information they gather can be used to identify vulnerable services that they can then exploit to gain unauthorized access.
-
-
-8. How does Wireshark complement port scanning?
-Wireshark is a network protocol analyzer that can be used to capture and analyze network traffic. It complements port scanning by allowing you to inspect the packets sent and received during a scan. This can help you verify how a tool like Nmap is interacting with a host and gain a deeper understanding of the network communication.
+NSE: Script Post-scanning.
+Initiating NSE at 13:42
+Completed NSE at 13:42, 0.00s elapsed
+Initiating NSE at 13:42
+Completed NSE at 13:42, 0.00s elapsed
+Initiating NSE at 13:42
+Completed NSE at 13:42, 0.00s elapsed
+Read data files from: C:\Program Files (x86)\Nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 191.64 seconds
+           Raw packets sent: 65546 (2.885MB) | Rcvd: 131129 (5.509MB)
+</output><host comment=""><status state="up"></status><address addr="10.127.208.153" vendor="" addrtype="ipv4"></address><hostnames></hostnames><ports><extraports count="65511" state="closed"></extraports><port portid="25" protocol="tcp"><state state="filtered" reason="no-response" reason_ttl="0"></state><service conf="3" method="table" name="smtp"></service></port><port portid="110" protocol="tcp"><state state="filtered" reason="no-response" reason_ttl="0"></state><service conf="3" method="table" name="pop3"></service></port><port portid="135" protocol="tcp"><state state="open" reason="syn-ack" reason_ttl="128"></state><service conf="10" method="probed" name="msrpc" product="Microsoft Windows RPC"></service></port><port portid="137" protocol="tcp"><state state="filtered" reason="no-response" reason_ttl="0"></state><service conf="3" method="table" name="netbios-ns"></service></port><port portid="139" protocol="tcp"><state state="open" reason="syn-ack" reason_ttl="128"></state><service conf="10" method="probed" name="netbios-ssn" product="Microsoft Windows netbios-ssn"></service></port><port portid="329" protocol="tcp"><state state="filtered" reason="no-response" reason_ttl="0"></state><service></service></port><port portid="445" protocol="tcp"><state state="open" reason="syn-ack" reason_ttl="128"></state><service conf="3" method="table" name="microsoft-ds"></service></port><port portid="548" protocol="tcp"><state state="filtered" reason="no-response" reason_ttl="0"></state><service conf="3" method="table" name="afp"></service></port><port portid="5040" protocol="tcp"><state state="open" reason="syn-ack" reason_ttl="128"></state><service></service></port><port portid="8020" protocol="tcp"><state state="open" reason="syn-ack" reason_ttl="128"></state><service conf="10" method="probed" name="http" product="nginx" extrainfo="reverse proxy"></service></port><port portid="8027" protocol="tcp"><state state="open" reason="syn-ack" reason_ttl="128"></state><service conf="3" method="table" name="papachi-p2p-srv"></service></port><port portid="8028" protocol="tcp"><state state="open" reason="syn-ack" reason_ttl="128"></state><service conf="10" method="probed" name="postgresql" product="PostgreSQL DB" version="9.6.0 or later"></service></port><port portid="8383" protocol="tcp"><state state="open" reason="syn-ack" reason_ttl="128"></state><service conf="10" method="probed" name="http" product="nginx"></service></port><port portid="8443" protocol="tcp"><state state="open" reason="syn-ack" reason_ttl="128"></state><service conf="10" method="probed" name="https-alt"></service></port><port portid="8444" protocol="tcp"><state state="open" reason="syn-ack" reason_ttl="128"></state><service conf="3" method="table" name="pcsync-http"></service></port><port portid="8834" protocol="tcp"><state state="open" reason="syn-ack" reason_ttl="128"></state><service conf="3" method="table" name="nessus-xmlrpc"></service></port><port portid="9095" protocol="tcp"><state state="open" reason="syn-ack" reason_ttl="128"></state><service conf="10" method="probed" name="http" product="Microsoft HTTPAPI httpd" version="2.0" extrainfo="SSDP/UPnP"></service></port><port portid="27036" protocol="tcp"><state state="open" reason="syn-ack" reason_ttl="128"></state><service conf="10" method="probed" name="steam" product="Valve Steam In-Home Streaming service" extrainfo="TLSv1.2 PSK"></service></port><port portid="49664" protocol="tcp"><state state="open" reason="syn-ack" reason_ttl="128"></state><service conf="10" method="probed" name="msrpc" product="Microsoft Windows RPC"></service></port><port portid="49665" protocol="tcp"><state state="open" reason="syn-ack" reason_ttl="128"></state><service conf="10" method="probed" name="msrpc" product="Microsoft Windows RPC"></service></port><port portid="49666" protocol="tcp"><state state="open" reason="syn-ack" reason_ttl="128"></state><service conf="10" method="probed" name="msrpc" product="Microsoft Windows RPC"></service></port><port portid="49667" protocol="tcp"><state state="open" reason="syn-ack" reason_ttl="128"></state><service conf="10" method="probed" name="msrpc" product="Microsoft Windows RPC"></service></port><port portid="49668" protocol="tcp"><state state="open" reason="syn-ack" reason_ttl="128"></state><service conf="10" method="probed" name="msrpc" product="Microsoft Windows RPC"></service></port><port portid="49669" protocol="tcp"><state state="open" reason="syn-ack" reason_ttl="128"></state><service conf="10" method="probed" name="msrpc" product="Microsoft Windows RPC"></service></port></ports><os><portused state="open" proto="tcp" portid="135"></portused><portused state="closed" proto="tcp" portid="1"></portused><portused state="closed" proto="udp" portid="38310"></portused><osmatch name="Microsoft Windows 10 1607 - 11 23H2" accuracy="100" line="74791"><osclass vendor="Microsoft" osfamily="Windows" type="general purpose" osgen="11" accuracy="100"></osclass></osmatch></os><uptime seconds="526942" lastboot="Tue Sep 16 11:20:20 2025"></uptime><tcpsequence index="261" difficulty="Good luck!" values="2582D8E7,ADA20738,84DE0C7A,68685CDA,4008697,ECE1C560"></tcpsequence><ipidsequence class="Incremental" values="5188,518A,518C,518E,5190,5192"></ipidsequence><tcptssequence class="1000HZ" values="1F683A4F,1F683ABE,1F683B2C,1F683B9A,1F683C08,1F683C76"></tcptssequence></host><runstats><finished time="1758528762" timestr="Mon Sep 22 13:42:42 2025"></finished><hosts up="1" down="0" total="1"></hosts></runstats></nmaprun>
